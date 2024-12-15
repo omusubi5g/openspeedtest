@@ -1,0 +1,32 @@
+server {
+    listen 80;
+    server_name localhost;
+
+    root /var/www/openspeedtest;
+    index index.html;
+
+    location / {
+        client_max_body_size 10000M;
+       try_files $uri $uri/ /index.html;
+  }
+
+
+
+        client_max_body_size 35m;
+        error_page 405 =200 $uri;
+        access_log off;
+        gzip off;
+        fastcgi_read_timeout 999;
+        log_not_found off;
+        server_tokens off;
+        error_log /dev/null; #Disable this for Windows Nginx.
+        tcp_nodelay on;
+        tcp_nopush on;
+        sendfile on;
+        open_file_cache max=200000 inactive=20s;
+        open_file_cache_valid 30s;
+        open_file_cache_min_uses 2;
+        open_file_cache_errors off;
+
+
+}
