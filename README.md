@@ -10,7 +10,8 @@ https://github.com/openspeedtest/Speed-Test
 1. [http://自身のIPアドレス] でOpenspeedTestを実行するたび、[http://自身のIPアドレス:5000]にログが記録されていきます
 1. LAN内からアクセスするには下記を参考に、wsl2のUbuntuあてに80番ポートをポートフォワーディングしておきます
 https://qiita.com/kentomo1002/items/82234030e712c44c2e40
-1. iPhoneから測定するとUploadがバグるときは、/etc/nginx/sites-enabled/openspeedtest　を本フォルダ内のopenspeedtestを参考に修正してください
+1. iPhoneから測定するとUploadがバグるときは、/etc/nginx/sites-enabled/openspeedtest　を本フォルダ内のopenspeedtestを参考に修正してください。
+safariだとバグったままですがEdgeだと治ります。
 
 ![image](https://github.com/user-attachments/assets/50fdb2e7-bdb7-4b85-95b8-ee80a03f7352)
 ![image](https://github.com/user-attachments/assets/56c6e0a7-653b-48bc-b930-d5cb2c3c4df2)
